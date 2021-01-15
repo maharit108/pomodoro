@@ -14,5 +14,8 @@
   },
   "content_security_policy": " script-src 'self' 'sha256-TTIEFSKqKjXMhqjqsfcXww+0zMm8bEMjPr53Ow5DGI8=' ; object-src 'self'",
   "permissions": [
-  ]
+  ],
+  "background": {
+    "scripts": ["./app/background.js"]
+  }
 }
