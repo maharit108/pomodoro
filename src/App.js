@@ -6,8 +6,8 @@ import './App.css';
 function App() {
 
   const [needAlarm, setNeedAlarm ] = useState(true)
-  const [workTime, setWorkTime] = useState(0)
-  const [breakTime, setBreakTime] = useState(0)
+  const [workTime, setWorkTime] = useState(0.05)
+  const [breakTime, setBreakTime] = useState(0.05)
   
   const createAlarm = () => {
     if (needAlarm) {
@@ -24,7 +24,6 @@ function App() {
   const cancelAlarm = () => {
     chrome.alarms.clearAll(() => {
       alert('Work Session ended')
-      console.log('All alarms removed')
     })
   }
 
@@ -32,8 +31,9 @@ function App() {
     <div className="App">
       <h1>Pomodoro</h1>
       <p>An effective Way of working</p>
-      <input name='workTime' value={workTime} type='text' placeholder='25-35 mins is most effective' onChange={e => setWorkTime(e.target.value)}>Work Time Duration</input>
-      <input name='breakTime' value={breakTime} type='text' placeholder='5-10 mins is most effective' onChange={e => setBreakTime(e.target.value)}>Break Time Duration</input>
+      <button onClick={setWorkTime(1)}>1</button>
+      <button onClick={setBreakTime(1)}>2</button>
+      <p>Work for {workTime} minutes, then take break for {breakTime} minutes</p>
       <button id='App__toggleAlarm' onClick={createAlarm} >Create Alarm</button>
       <button id='App__toggleAlarm' onClick={cancelAlarm} >Remove Alarm</button>
     </div>
