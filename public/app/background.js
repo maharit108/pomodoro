@@ -1,11 +1,11 @@
 /*global chrome*/
-let work = true
 
   chrome.alarms.onAlarm.addListener(alarm => {
-    alert("Break Time!")
-    chrome.notifications.create(message);
-    //communicate to content.js:
-    chrome.tabs.query({ currentWindow: true, active: true }, tabs => {
-      chrome.tabs.sendMessage(tabs[0].id, {message: "alarm"});
-    });
+    console.log(alarm, alarm.name)
+    if (alarm.name === 'breakStart') {
+      alert('---Break Time!!!--- \n Take a break!!! \n \n To End Alarms, Click on the Pomodoro Extension and Remove Alarm')
+    }
+    if (alarm.name === 'workStart') {
+      alert('---Work Time!!!--- \n Time to go back to Work!!!  \n \n To End Alarms, Click on the Pomodoro Extension and Remove Alarm')
+    }
   });

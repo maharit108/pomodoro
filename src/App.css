@@ -1,5 +1,81 @@
 .App {
   text-align: center;
-  height: 500px;
-  width: 500px;
+  height: 620px;
+  width: 430px;
+  background: #ADADAD;
+  color:black;
+}
+
+img {
+  height: 100px;
+  width: 100px;
+  border-radius: 15px;
+}
+
+.tomatoImg {
+  object-fit: fit;
+  overflow: hidden;
+}
+
+h1 {
+  padding: 20px 20px 0 20px;
+  margin: 0;
+}
+
+.breakTime, .workTime {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+p {
+  margin: 10px;
+  font-size: 20px;;
+}
+
+h2 {
+  margin: 40px 10px 10px 10px;
+}
+
+button {
+  margin: 5px;
+  width: 40px;
+  padding: 5px;
+  border: 2px solid black;
+  border-radius: 5px;
+  background-color: rgba(239, 239, 239, 0.8);
+  transition: transform .4s;
+}
+
+button:hover {
+  background-color: rgba(239, 239, 239, 1);
+  transform: scale(1.15);
+}
+
+.foot {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.alarmBtn {
+  width: 150px;
+  height: 40px;
+}
+
+.alarmBtn:hover {
+  background-color: rgba(239, 239, 239, 0.8);
+  transform: scale(1);
+}
+
+span {
+  font-weight: 800;
+  font-size: 22px;
+  color:firebrick;
+}
+
+.MuiSvgIcon-root {
+  margin: 0 20px;
 }
