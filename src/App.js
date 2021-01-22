@@ -8,18 +8,22 @@ import pomodoro from './pomodoro.jpg'
 
 function App() {
 
-  const [workTime, setWorkTime] = useState(0.1)
-  const [breakTime, setBreakTime] = useState(0.1)
+  const [workTime, setWorkTime] = useState(0)
+  const [breakTime, setBreakTime] = useState(0)
 
   const createAlarm = () => {
-    chrome.browserAction.setBadgeText({ text: 'ON'})
-    chrome.alarms.create('breakStart', {
-      delayInMinutes: workTime, periodInMinutes: (workTime + breakTime)
-    })
-    chrome.alarms.create('workStart', {
-      delayInMinutes: (workTime + breakTime), periodInMinutes: (workTime + breakTime)
-    })
-    window.close()
+    if (workTime && breakTime) {
+      chrome.browserAction.setBadgeText({ text: 'ON'})
+      chrome.alarms.create('breakStart', {
+        delayInMinutes: workTime, periodInMinutes: (workTime + breakTime)
+      })
+      chrome.alarms.create('workStart', {
+        delayInMinutes: (workTime + breakTime), periodInMinutes: (workTime + breakTime)
+      })
+      window.close()
+    } else {
+      alert('Please Select Work and Break Sessions Duration')
+    }
   }
 
   const cancelAlarm = () => {
