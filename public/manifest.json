@@ -1,6 +1,6 @@
 {
   "manifest_version": 2,
-  "name": "Pomodoro Extension",
+  "name": "Pomodoro Tool",
   "description": "Extension to practice pomodoro technique while using chrome.",
   "version": "0.0.1",
 
@@ -9,9 +9,9 @@
     "default_title": "Pomodoro"
   },
   "icons": {
-    "16": "logo192.png",
-    "48": "logo192.png",
-    "128": "logo192.png"
+    "16": "logo.png",
+    "48": "logo.png",
+    "128": "logo.png"
   },
   "content_security_policy":"script-src 'self' 'sha256-+fu7pAnkx9EJaixFUx/HES31UWFyVNalBloghuRUQI8='; object-src 'self' ",
   "permissions": ["alarms"],
