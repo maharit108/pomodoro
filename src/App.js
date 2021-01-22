@@ -13,19 +13,25 @@ function App() {
 
   const createAlarm = () => {
     if (workTime && breakTime) {
+      // set badge to 'ON' when there is an alarm
       chrome.browserAction.setBadgeText({ text: 'ON'})
+      // 1st alarm to start break
       chrome.alarms.create('breakStart', {
         delayInMinutes: workTime, periodInMinutes: (workTime + breakTime)
       })
+      // 2nd alarm to end break
       chrome.alarms.create('workStart', {
         delayInMinutes: (workTime + breakTime), periodInMinutes: (workTime + breakTime)
       })
+      // close window after alarms created
       window.close()
     } else {
+      // if no durations selected
       alert('Please Select Work and Break Sessions Duration')
     }
   }
 
+  // when all alarms removed.
   const cancelAlarm = () => {
     chrome.alarms.clearAll(() => {
       chrome.browserAction.setBadgeText({ text: 'OFF'})
