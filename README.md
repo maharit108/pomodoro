@@ -14,7 +14,7 @@ In the meantime, if you want to use this extension:
 
 * Download zip file from [pomodoro build zip](https://drive.google.com/file/d/1DeJsCvn8z4WYLY5jRkOkoACyV2bi6OO6/view?usp=sharing)
 * Unzip the file. It will unzip into 'pomodoro' folder
-* Go to [chrome extensions](chrome://extensions/)
+* Go to chrome://extensions/
 * Turn Developer Mode on.
 * Click on Load unpacked and select the 'pomodoro' folder.
 * You are all set.
