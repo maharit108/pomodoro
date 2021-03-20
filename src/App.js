@@ -1,6 +1,6 @@
 /*global chrome*/
 
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import './App.css';
 
 import AccessAlarmsIcon from '@material-ui/icons/AccessAlarms';
@@ -40,6 +40,16 @@ function App() {
     })
   }
 
+  useEffect(() => {
+    chrome.alarms.getAll((alarmsArr) => {
+      if(alarmsArr.length === 0) {
+        document.getElementById('alarmBtn_remove').disabled = true
+      } else {
+        document.getElementById('alarmBtn_create').disabled = true
+      }
+    })
+  },[])
+
   return (
     <div className="App">
       <h1>Pomodoro</h1>
@@ -71,8 +81,10 @@ function App() {
         <p>minutes</p>
       </div>
       <br />
+
       <p className='summary'>Work for <span>{workTime}</span> minutes, then take break for <span>{breakTime}</span> minutes</p>
       <br />
+
       <div className='foot'>
         <button className='alarmBtn' id='alarmBtn_create' onClick={createAlarm}>Create Alarm</button>
         <button className='alarmBtn' id='alarmBtn_remove' onClick={cancelAlarm}>Remove Alarm</button>
