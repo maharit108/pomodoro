@@ -10,7 +10,7 @@ This is a chrome extension that can help enforce Pomodoro technique.
 ___
 
 I am working on publishing this extension on Chrome Web store.
-In the meantime, if you want to use this extension:
+In the meantime, if you want to use this extension (developer mode):
 
 * Download zip file from [pomodoro build zip](https://drive.google.com/file/d/1DeJsCvn8z4WYLY5jRkOkoACyV2bi6OO6/view?usp=sharing)
 * Unzip the file. It will unzip into 'pomodoro' folder

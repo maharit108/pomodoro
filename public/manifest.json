@@ -2,7 +2,7 @@
   "manifest_version": 2,
   "name": "Pomodoro Tool",
   "description": "Extension to practice pomodoro technique while using chrome.",
-  "version": "0.0.1",
+  "version": "0.0.2",
 
   "browser_action": {
     "default_popup": "index.html",
