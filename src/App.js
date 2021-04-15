@@ -1,9 +1,9 @@
 /*global chrome*/
 
 import React, { useState, useEffect } from 'react'
-import './App.css';
+import './App.css'
 
-import AccessAlarmsIcon from '@material-ui/icons/AccessAlarms';
+import AccessAlarmsIcon from '@material-ui/icons/AccessAlarms'
 import pomodoro from './pomodoro.jpg'
 
 function App() {
@@ -114,7 +114,7 @@ function App() {
         <button className='alarmBtn' id='alarmBtn_remove' onClick={cancelAlarm}>Remove Alarm</button>
       </div>
     </div>
-  );
+  )
 }
 
-export default App;
+export default App

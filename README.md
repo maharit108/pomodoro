@@ -9,14 +9,8 @@ This is a chrome extension that can help enforce Pomodoro technique.
 - I can remove alarms when I dont need to use Pomodoro technique.
 ___
 
-I am working on publishing this extension on Chrome Web store.
-In the meantime, if you want to use this extension (developer mode):
+You can now install the extension for chrome:
+[pomodoro extension](https://chrome.google.com/webstore/detail/pomodoro-tool/bembgggdodkjkgabgmhbmjdnpdacdgdh?hl=en-US)
 
-* Download zip file from [pomodoro build zip](https://drive.google.com/file/d/1DeJsCvn8z4WYLY5jRkOkoACyV2bi6OO6/view?usp=sharing)
-* Unzip the file. It will unzip into 'pomodoro' folder
-* Go to chrome://extensions/
-* Turn Developer Mode on.
-* Click on Load unpacked and select the 'pomodoro' folder.
-* You are all set.
 
 
